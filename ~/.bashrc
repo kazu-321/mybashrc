@@ -99,7 +99,7 @@ BG_YELLOW="\[\e[43m\]"
 
 # count untracked files
 parse_git_count() {
-    expr $(git status --porcelain 2>/dev/null | grep -E "^ M|^??|^ D" | wc -l)
+    expr $(git status --porcelain 2>/dev/null | grep -E "^ M|^\\?\\?|^ D" | wc -l)
 }
 
 # change color between clean/dirty tree
